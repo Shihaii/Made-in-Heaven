@@ -1,0 +1,94 @@
+@keyframes color {
+  0% {
+    /* background-color: cyan; */
+  }
+  25%,
+  50%,
+  62.5% {
+    background-color: darkslategrey;
+  }
+
+  100% {
+    /* background-color: cyan; */
+  }
+}
+@keyframes rotate {
+  0% {
+    /* background-color: cyan; */
+    transform: rotate(0);
+  }
+  25%,
+  50%,
+  62.5% {
+    /* background-color: darkslategrey; */
+  }
+
+  100% {
+    /* background-color: cyan; */
+    transform: rotate(360deg);
+  }
+}
+.cover {
+  width: 100%;
+  /* background-color: darkslategrey; */
+  /* background-color: red; */
+  aspect-ratio: 2/1;
+  position: absolute;
+  bottom: 0;
+}
+.containerr {
+  /* animation-name: color; */
+  animation-duration: 18s;
+  position: relative;
+}
+.trajectory {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-range: -40% 20%;
+  aspect-ratio: 1/1;
+  width: 80%;
+  /* background-color: black; */
+  position: relative;
+  margin-left: 10%;
+  border-radius: 80%;
+}
+.sun {
+  background-color: #cceb00;
+  border-radius: 80%;
+  width: 10%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: 45%;
+  z-index: 0;
+  box-shadow: 0 0 0 5px #cceb0053, 0 0 0 10px #cceb0033, 0 0 0 20px #cceb0023;
+}
+.moon {
+  background-color: whitesmoke;
+  background-image: url("../assets/moon.png");
+  /* box-shadow: 0 0 0 5px #ffffff3d,
+  0 0 0 10px #ffffff3d; */
+  border-radius: 80%;
+  width: 10%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+  z-index: 0;
+  box-shadow: 10px;
+}
+
+img {
+  width: 100%;
+  border-radius: 80%;
+}
+
+div { 
+  align-content: end;
+  align-items: end;
+}
+.space-gradient {
+  background: linear-gradient(#4d1287, #250545);
+}

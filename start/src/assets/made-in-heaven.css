@@ -1,0 +1,66 @@
+.containerr{
+    padding: 10px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    z-index: 10;
+    /* flex-direction:row-reverse; */
+}
+.flex-reverse-row-direction{
+    flex-direction: row-reverse;
+}
+.character-image{
+    width: 30vw;
+    flex-shrink: 0;
+}
+.character-image img{
+ width: 100%;
+}
+.text-container{
+display: flex;
+flex-direction: column;
+}
+.text-container .header-text-container{
+    padding-left: 7vw;
+    padding-right: 7vw;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+    color: whitesmoke;
+}
+.text-container .header-text-container{
+    flex-grow: 1;
+    /* align-self:flex-end; */
+    /* text-align: right; */
+    /* text-align-last:right; */
+}
+.text-align-right{
+    text-align: right;
+}
+.text-container .casual-text-container{
+    flex-grow: 2;
+    color: whitesmoke;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+@keyframes soar{
+    0%{
+        transform: translateY(0);
+        transform: scale(1);
+    }
+    50%{
+        transform: translateY(+5vh);
+        transform: scale(1.08);
+    }
+    100%{
+        transform: translateY(0);
+        transform: scale(1);
+    }
+}
+.soar{
+    animation-name: soar;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+}
