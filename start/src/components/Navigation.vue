@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import  {type NavigationLink} from 'src/types'
+import { RouterLink } from 'vue-router';
 defineProps<{
   links?: NavigationLink[]
 }>()
@@ -10,7 +11,7 @@ defineProps<{
   <div class="container">
     <ul class="">
           <li v-for = "link in links">
-            <a :href="link.url" class="">{{ link.name }}</a></li>
+            <RouterLink :to="link.url" class="">{{ link.name }}</RouterLink></li>
         </ul>
   </div>  
 </header>
@@ -25,21 +26,31 @@ defineProps<{
 
 }
 ul{
+  list-style-type: none;
   display: flex;
   flex-grow: 1;
-  gap: 1vw;
+  /* gap: 1vw; */
+  background-color: rgba(240, 248, 255, 0.059);
   
 }
 li{
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  border: 1px solid whitesmoke;
-  border-radius: 29%;
+ 
+  /* border-radius: 12%; */
+  display: flex;
 }
-a{
+li a{
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
   color: whitesmoke;
   text-decoration: none;
+  border-radius: 12%;
+  /* flex-grow: 1; */
+}
+li a:hover{
+  background-color: rgba(240, 248, 255, 0.115);
+  /* border: 1px solid whitesmoke; */
+  /* cursor: pointer; */
 }
 </style>
