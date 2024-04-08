@@ -23,7 +23,6 @@ defineProps<{
   display: flex;
   /* border-bottom: 1px dotted  whitesmoke; */
   margin-bottom: 5vh ;
-
 }
 ul{
   list-style-type: none;
@@ -31,7 +30,7 @@ ul{
   flex-grow: 1;
   /* gap: 1vw; */
   background-color: rgba(240, 248, 255, 0.059);
-  
+  border-radius: 20px;
 }
 li{
  
@@ -43,9 +42,10 @@ li a{
   padding-right: 2vw;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
-  color: whitesmoke;
+  color: var(--primary-text-color);
+  font-weight: 650;
   text-decoration: none;
-  border-radius: 12%;
+  border-radius: 15px;
   /* flex-grow: 1; */
 }
 li a:hover{

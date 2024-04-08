@@ -5,21 +5,21 @@ import Vue from 'vue';
 
 
 defineProps<{
-  image_src: string;
+  image_src: ArrayBuffer;
   header: string;
   text: string;
-  direction : boolean;
+  direction : string;
 }>()
 
 
-const getDirection = (direction : boolean) => {
-  console.log(direction)
-  if(direction){
-    return ""
+const getDirection = (direction : string) => {
+  console.log("direction in MadeInHeaven",direction)
+  if(direction=="right"){
+    const o = ref("flex-reverse-row-direction");
+    return "flex-reverse-row-direction";
   }
   else{
-    const o = ref("flex-reverse-row-direction")
-    return "flex-reverse-row-direction"
+    return "";
   }
 }
 const getHeaderDirection = (direction : boolean) => {
@@ -36,11 +36,21 @@ const getImageSrc = (image_src : string) => {
     console.error(error);
   }
 }
+
+const getImageSrc2 = (image_src : ArrayBuffer) => {
+
+var arrayBufferView = new Uint8Array( image_src );
+var blob = new Blob( [ arrayBufferView ], { type: "image/*" } );
+var urlCreator = window.URL || window.webkitURL;
+var imageUrl = urlCreator.createObjectURL( blob );
+console.log("Imageurl",imageUrl)
+return imageUrl;
+}
 </script>
 <template style="z-index=6">
   <div :class="'containerr ' +  getDirection(direction)" >
     <div class="character-image soar">
-        <img :src="getImageSrc(image_src)" alt="" />
+        <img :src="getImageSrc2(image_src)" alt="" />
     </div>
     <div class="text-container">
       <div :class="'header-text-container ' + getHeaderDirection(direction)">

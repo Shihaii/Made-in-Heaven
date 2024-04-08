@@ -27,7 +27,7 @@ flex-direction: column;
  display: flex;
  flex-direction: column;
  justify-content: center;
-    color: whitesmoke;
+ color: var(--primary-text-color);
 }
 .text-container .header-text-container{
     flex-grow: 1;
@@ -40,7 +40,7 @@ flex-direction: column;
 }
 .text-container .casual-text-container{
     flex-grow: 2;
-    color: whitesmoke;
+    color: var(--primary-text-color);
     padding-left: 5vw;
     padding-right: 5vw;
 }
@@ -58,23 +58,10 @@ flex-direction: column;
         /* transform: scale(1); */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .soar{
     animation-name: soar;
     animation-duration: 5s;
     animation-iteration-count:infinite;
     animation-timing-function:ease-out;
 }
+

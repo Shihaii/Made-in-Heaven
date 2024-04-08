@@ -1,3 +1,9 @@
+:root{
+    --primary-background-color:purple;
+    --light-space-color:#250545;
+    --dark-space-color:#1c0532;
+    --primary-text-color:whitesmoke;
+}
 .space{
     background-color: transparent;
     background-image:url(../src/assets/stars.png), linear-gradient(#250545,#1c0532);
@@ -6,7 +12,7 @@
 }
 .space-static{
     background-color: transparent;
-    background-image:url(../src/assets/stars.png),linear-gradient(#250545,#250545);
+    background-image:url(../src/assets/stars.png),linear-gradient(var(--light-space-color),#250545);
 }
 /* linear-gradient(#4d1287,#250545) */
 body::-webkit-scrollbar {
